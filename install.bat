@@ -6,5 +6,10 @@ cd /d %~dp0
 
 takeown /F %WINDIR%\Fonts\msgothic.ttc /A
 icacls %WINDIR%\Fonts\msgothic.ttc /grant Administrators:F
-move %WINDIR%\Fonts\msgothic.ttc %WINDIR%\Fonts\msgothic.ttc.old
-move MeiryoKe_Mod.ttc %WINDIR%\Fonts\msgothic.ttc
+move /Y %WINDIR%\Fonts\msgothic.ttc %WINDIR%\Fonts\msgothic.ttc.old
+copy /Y MeiryoKe_Mod.ttc %WINDIR%\Fonts\msgothic.ttc
+
+echo.
+echo Please Reboot the computer...
+pause
+shutdown -r -t 0
